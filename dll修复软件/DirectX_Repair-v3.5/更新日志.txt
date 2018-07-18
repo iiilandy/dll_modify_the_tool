@@ -1,0 +1,258 @@
+DirectX修复工具V3.5更新日志
+新增的功能：
+    新增全新的c++扩展包。新版程序增加支持了c++2015的扩展包，可以修复c++2015的相关内容，可以在一定程度上提高对于0xc000007b错误解决的概率。
+    新增扩展功能。在“工具”菜单下“选项”对话框的“扩展”界面中，可以扩展程序的c++数据包，可将标准版及在线修复版程序直接扩展成增强版，免去了再去网上自行寻找相应版本的麻烦。同时仍保留手动下载数据包的链接，方便在无法连接网络时进行扩展。
+
+改进的功能：
+    更新了部分c++数据包。程序根据用户的反馈情况，及时更新了c++2013的程序数据包。新数据包兼容性更强，可以修复更多的内容。
+    改进了对于管理员权限的检测与提示。新版程序将在所有的系统中均检测是否具有管理员权限，如果没有则进行相应提示，避免因缺少权限而带来的修复失败。
+    改进了在部分系统上全部修复失败时的提示。程序将主动引导此类系统的用户使用低安全级别进行修复，从而避免因系统核心组件异常导致的修复失败。
+    改进了更新c++文件的校验机制。新的机制可以更加智能的判断需要修复的文件，减少不必要的文件操作，提高效率。
+    改进了部分英文翻译。新的翻译更加准确，方便用户理解。
+    其他细节性改进。
+
+修复的BUG：
+    修复了程序在注册DirectX文件时可能卡住的BUG。
+    修复了调整DirectX加速时状态显示异常的BUG。
+    修复了在特殊某些路径下无法更新c++的BUG。
+    修复了在某些特殊情况下c++可能更新失败的BUG。
+    
+
+
+------------------------------------------------------------------------------------------------------------------
+----------------------------------------------更新分隔线----------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+
+DirectX修复工具V3.3更新日志
+改进的功能：
+    优化了下载部分的代码。当使用在线修复时，新的代码可以更高效率地完成下载，节省修复时间。
+    改进了捐赠界面。手机捐赠界面、网页捐赠界面、免费捐赠界面独立显示，提供更多帮助信息。
+
+修复的BUG：
+    修复了程序对c++安装情况可能给出错误提示的BUG。
+    修复了程序被其他软件调用修复时可能出现异常的BUG。
+
+
+------------------------------------------------------------------------------------------------------------------
+----------------------------------------------更新分隔线----------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+
+DirectX修复工具V3.2更新日志
+新增的功能：
+    新增控制DirectX加速功能。DirectX加速功能十分重要，但部分用户的加速功能被禁用无法开启，使用本程序“选项”菜单里的小工具即可轻松解决加速被禁用的问题。
+    新增全新的c++扩展包。新版程序增加了c++2013的扩展包，可以修复c++2013的相关内容，可以在一定程度上提高对于0xc000007b错误解决的概率。
+    新增了版权信息显示功能。用户可以根据自身需要决定是否显示版权信息，方便将本程序内嵌使用。
+
+改进的功能：
+    更新了部分c++数据包。程序根据用户的反馈情况，及时更新了c++2012的程序数据包。新数据包兼容性更强，可以修复更多的内容。
+    大幅优化了程序首次显示速度。通过对于代码结构的优化，实现了对于窗体首次显示速度的大幅提升。
+    改进了修复的提示完成的框。新的提示更加人性化，方便用户执行相关操作。
+
+修复的BUG：
+    修复了部分系统下c++2012修复失败的BUG。
+    修复了反馈程序显示异常的BUG。
+    修复了更新c++数据包提示错误的BUG。
+    修复了Windows 7系统下大字体时窗体显示异常的BUG。
+    修复了Windows XP系统下简约窗体显示异常的BUG。
+    修复了简约模式可能意外退出的BUG。
+    
+
+------------------------------------------------------------------------------------------------------------------
+----------------------------------------------更新分隔线----------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+
+DirectX修复工具V3.0更新日志（重要更新）
+新增的功能：
+    新增全新的c++扩展包。程序（仅限增强版可修复c++）可以修复更多的错误，解决更多的问题。
+    新增注册指定文件夹下所有dll文件的功能。旧版本的程序只能注册系统文件夹下的dll文件，而新版本可以注册任意指定文件夹下的dll文件，方便用户对绿色版、硬盘版的程序组件进行注册。
+    
+
+改进的功能：
+    针对工业软件的0xc000007b错误进行优化。针对工业软件（如3DS MAX、MAYA等）进行了大量优化，优化对64位工业软件的支持，可以显著提高修复成功的概率（较之前版本而言）。
+    优化了对于Windows Blue(Windows 8.1)系统的支持。针对系统相关内容进行优化，防止程序运行时出现意外错误。
+    优化了对于c++修复功能的检测与提示。修复完c++后，程序会分别检测c++的注册表和文件是否全部正确，并且给予不同样式的提示，方便用户的了解。通常情况下，c++注册表的错误不影响其他程序的运行。
+    优化了程序的提示功能。如果用户使用标准版进行修复，修复完成后如果程序检测系统中的c++组件仍存在异常，则程序会自动提示用户使用增强版进行修复，免去了用户的麻烦。
+    优化了反馈程序的提示功能。在发送反馈信息前给予用户提示，避免因部分安全软件的提示给用户造成困惑。
+    对捐赠界面进行优化。新添加了二维码，只要用手机一扫即可快捷捐赠，免去了使用网页捐赠带来的诸如步骤繁琐、需要证书等烦恼。同时仍保留网页捐赠链接，方便没有手机客户端的用户。
+    其他细节性改进。
+
+------------------------------------------------------------------------------------------------------------------
+----------------------------------------------更新分隔线----------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+
+DirectX修复工具V2.5更新日志
+新增的功能：
+    新增两种全新的窗口样式。其中一种为简约模式，此时窗口将只显示最基本的内容，修复会自动进行，修复完成10秒钟后会自动退出。增加该窗口样式的目的是可以使修复工作变得更加简单快速，同时方便其他软件、游戏将本程序内嵌，即可进行无需人工参与的快速修复。开启简约模式的方法是：打开程序所在目录下的“Settings.ini”文件（如果没有可以自己创建），将其中的“FormStyle”一项的值改为“Simple”并保存即可。
+    新增高级筛选功能。开启该功能后用户可以自主选择要修复的文件，避免了其他不必要的修复工作。同时，也支持通过文件进行辅助筛选，只要在程序目录下建立“Filter.dat”文件，其中的每一行写一个需要修复文件的序号即可。该功能仅针对高级用户使用，并且必须在正常窗口模式下才有效（简约模式时无效）。
+    新增智能修复功能。根据目前大多数用户的实际情况，增加了智能修复，在最理想的情况下可以减少100%的在线修复下载需求，极大缩短了在线修复的耗时。智能修复功能在64位系统上的效果要明显好于32位系统。
+    新增了查看任意位置日志文件的功能。只要在主程序的“文件”菜单中的“查看日志文件”菜单上单击右键，即可通过弹出的对话框查看任意位置的日志文件（仅限本程序的日志文件）。
+
+
+改进的功能：
+    改进错误处理能力。改进后可以进一步降低修复失败的概率。
+    优化了对于Windows 8系统的支持。鉴于Windows 8系统中默认未包含.NET Framework 2.0，因此新版的程序文件夹内将包含一个DirectX_Repair_win8的特别版程序，该程序功能与通用版相同，基于.NET Framework 4.0开发，可以在Windows8系统中直接运行（其他系统如果安装了.NET Framework 4.0或更高版本也可以运行这个特别版的程序）。
+    优化了日志文件的记录内容。在修复时点击“取消”按钮后也会记录日志文件，方便将来进行分析。
+    改进了日志文件的部分编码方式。使用旧版程序可能无法正确显示所有的内容，而新版本可以正常显示V2.5及之前的所有版本的日志文件。
+    其他细节性改进。
+
+------------------------------------------------------------------------------------------------------------------
+----------------------------------------------更新分隔线----------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+
+DirectX修复工具V2.1更新日志
+新增的功能：
+    新增修改DirectX安装文件版本号功能。有部分电脑显示已安装的DirectX的版本号为0.00.00.0000，使用本软件可以修改成任意版本号（如4.09.00.0904）。请注意，修改DirectX版本号并不能真正改变你系统中已经安装的DirectX的版本。修改后只是会改变某些软件的显示。
+    新增修复完成后自动退出功能。若使用在线修复，由于网速原因修复时间可能较长，用户可以到“选项”对话框中开启此功能（默认未开启）。当修复完成时，程序给予提示，如果用户不进行任何操作，10秒钟后程序会自动退出。
+
+
+改进的功能：
+    取消了修复完成后进行用户反馈的提示。这样可以使程序界面更清爽。
+    取消了在线修复时的百分比显示。这样可以防止在部分电脑上程序停止响应。
+    选项对话框的界面改进。优化了界面的显示，增加了一些提示，改进了一些选项。
+    其他细节性改进。
+
+
+修复的BUG：
+    修复了在线修复时在某些电脑上会停止响应的BUG。修复后程序运行的稳定性将会大幅提高。
+    修复了在部分电脑上某些文件会修复失败的BUG。修复后可以杜绝绝大多数的修复失败的情况。
+
+------------------------------------------------------------------------------------------------------------------
+----------------------------------------------更新分隔线----------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+
+DirectX修复工具V2.0更新日志（重要更新）
+新增的功能：
+    新增在线修复功能。使用在线修复，可以使程序精简到极致的1MB，方便移动。同时仍支持离线修复，自由选择两不误。如果您无法连接到Internet，也可以手动下载离线数据包： http://blog.csdn.net/vbcom/article/details/7303410
+    采用了全新的底层程序架构。新的异步多线程架构使检测、下载、修复相互独立，互不干扰，可以显著提高程序的检测修复速度。
+
+
+改进的功能：
+    将反馈程序融入主程序中。新的反馈程序将不再是单独的文件，而是集成于主程序中，方便用户移动，也为在线修复提供方便。
+    改进了程序自我校验方式。新的校验方式从原先的显式校验变为隐式校验，程序不会再出现自我校验失败的错误，同时程序安全性较之前版本相同，并未降低。
+    改进了修复失败时的提示内容。如果修复失败，程序将会提示用户以安全模式引导系统，然后进行修复。经测试，该方法对于大多数的修复失败有效。
+    改进了反馈程序的弹出机制。新的机制将不会在修复完成后直接弹出用户反馈按钮，而是引导用户从帮助菜单中启动。这样做的目的是由于现在我收到的反馈太多以至于应接不暇，更换方式后进行反馈的人会减少，以便我更好的为大家服务。
+    优化了选项菜单中的相关选项。由于在线修复的需要，原有的“文件检测方式”已经不再适用，改由安全级别选项代替，因此删除了此选项。由于在线修复的需要，原有的“允许使用精简版的数据包”已经不再适用，改为显式下载的百分比。
+    更改了反馈程序的限制关键词。新程序不再将"DirectX"作为程序限制关键词，方便用户进行描述。
+    其他细节性改进。
+
+
+修复的BUG：
+    修复反馈程序随机校验码异常的BUG。
+    修复反馈程序错误文件异常的BUG。
+
+------------------------------------------------------------------------------------------------------------------
+----------------------------------------------更新分隔线----------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+
+DirectX修复工具V1.2更新日志（重要更新）
+新增的功能：
+    新增注册DirectX组件的功能。程序在修复完成后会自动注册需要注册的组件，方便其他软件调用。
+    新增允许使用精简版数据包的功能。使用精简版的数据包可以有针对性的减少程序的体积，但必须在程序“选项”中勾选“允许使用精简版的数据包”后方可使用，否则会出现自我校验失败的问题。程序默认自带的是增强版的数据包。
+    新增修复失败时重新修复的功能。当修复失败时，程序会出现重新检测并修复按钮，不用退出程序即可再次修复。
+    新增自动更新c++功能。由于绝大多数软件运行时需要c++的支持，并且c++的异常也会导致0xc000007b错误，因此程序在检测修复的同时，也会根据需要更新系统中的c++组件。此功能是可选功能，仅在使用增强版数据包时有效。
+    新增英文语言包。该功能可以方便非汉语用户的需求。只需在程序目录下的"Language.ini"文件中将"Language=Chinese"改为"Language=English"即可。
+    新增记录失败详细原因的功能。如果修复失败，则程序会记录失败的详细原因，方便日后参考及改进软件质量。
+    新增反馈信息保存功能。如果反馈失败，则保存反馈信息，再下次反馈时可以直接调用，无需再次填写。
+
+
+改进的功能：
+    增强了多线程功能。根据CPU核心数的不同，程序最多可以支持4条线程同时运行，大大加快了修复进度。在使用“注册系统中所有dll文件”功能时尤其明显。
+    优化了对于Windows 7系统的支持。由于Windows 7中的Aero特效可能会占用某些文件，新程序可以在修复时临时关闭Aero特效以保证修复效果。
+    更新了反馈程序至V1.3.4418.34674。新的反馈描述更加详细，功能更加强大，提示更友好，可靠性更高。
+    增强了对d3dx10_40.dll文件修复的能力。该文件可能被系统占用，新程序可以将其解除占用后再进行修复。
+    改进了自我校验的算法。新的程序采用了加密的校验算法，安全性很高，速度稍慢，杜绝了莫名失败的可能性。新算法以略牺牲速度的代价换来了高的安全性和良好的兼容性。如果想提高速度，还可以到“选项”中更改为“一般校验”，校验速度可以大幅提高。
+    改进了修复的核心算法。新的算法可以有效减少修复失败的可能性。
+    改进了自我校验失败时的提示内容。新的提示图文并茂，方便用户查找问题。
+    优化了对Windows XP系统的支持。对于Windows XP系统，将其不需要的d3dx10.dll文件换为其需要的xinput9_1_0.dll文件。同时检测用户是否具有管理员权限，如果没有则给出相应提示。
+    改进了修复完成提示对话框的显示。新的对话框将使程序挂起，防止误操作。
+    改进了重绘控件的代码。新代码使得控件重绘速度大幅提高。
+    改进了日志文件的对齐算法。新算法使得日志文件完全对齐，方便浏览（只针对Windows 7）。
+    改进了“注册系统中所有dll文件”功能对于64位系统的支持。用户可以选择是否要注册64位的dll文件。
+    改进了修复失败时的提示。新的提示可以告诉用户失败的可能原因及解决办法。
+    改进了反馈程序的调用方式。反馈程序不能单独运行，需要从主程序“帮助”菜单中的“用户反馈”按钮调用。
+    改进了日志文件的显示方式。新的程序直接在txt文件中显示，方便用户保存及日后浏览。
+    优化了对低分辨率屏幕的支持。如果用户屏幕分辨率过低，则程序会自动最大化，方便用户完整浏览本程序。
+    改进了关于窗口中的字体样式。将原来的华文琥珀字体换为微软雅黑字体，提高程序显示的一致性。
+    其他细节性改进。
+    
+
+修正的BUG：
+    修正了自我校验失败时无法写日志文件的BUG。
+    修正了修复图标显示异常的BUG。
+    修正了dll右键菜单添加时路径异常的BUG。
+
+--------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------Dividing Line---------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+
+DirectX Repair V3.5
+New Features:
+    New c++ packages are added. The programme can now support c++ 2015 redistributable packages and solve relevant problems. The rate for solving 0xc000007b problems increases due to the new packages.
+    The feature of Extending is added. You can open the “Extending” page from sub-menu “Option” under the menu “Tool”. In this page, you can extend the programme with new c++ packages. It allows you to extend your Standard Edition or Online Edition to Enhanced Edition directly, without searching the Enhanced Edition from the Internet by yourself. Meanwhile, the programme still provides the link for downloading data package manually, which could be useful for the situations that Internet connection is unavailable.
+
+Improved Features:
+    Some c++ packages are updated. According to the feedbacks from some users, I update the packages of c++ 2013 to the latest version. New packages have a better compatibility and can fix more errors.
+    Messages for insufficient administrator privileges are improved. The new programme will check if you have administrator privileges before the repairing starts. A message will warn you if you do not have sufficient privileges to complete the repairing successfully in every Windows OS.
+    The notification of failed repairing for all the components has been improved. New tips will guide the users to enable Low Security directly, which might avoid the failures caused by the exceptions of the core system components.
+    The mechanism of checking c++ files has been improved. The new mechanism will be more intelligent when checking the files, and will require less unnecessary operations of the files.
+    Some parts of English translation are improved. The new translations are more accurate and correct, which could provide a better understanding of the programme.
+    Other detailed improvements.
+
+Fixed Bugs:
+    A bug that the programme may get stuck is fixed.
+    A bug which may show incorrect status when you are changing the DirectX Acceleration is fixed.
+    A bug that the programme may not be able to update c++ in some special paths is fixed.
+    A bug that c++ components might be failed to be updated in some special situations is fixed.
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------Dividing Line---------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+
+DirectX Repair V3.3
+Improved Features:
+    The codes for downloading files are optimized. When you are using the Online Edition, new codes will download files in a higher efficiency and save your time.
+    Donating page is improved. Three new separated pages which are Mobile Donation, Website Donation and Free Donation have replaced the old page. New pages are friendlier and will provide more information.
+
+Fixed Bugs:
+    A bug which may give wrong information when you are updating c++ has been fixed.
+    A bug which may lead to exceptions when this programme is being called by other software is fixed.
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------Dividing Line---------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+
+DirectX Repair V3.2
+New Features:
+    A function of controlling DirectX Acceleration is added. Although DirectX Acceleration is essential for most users, someone still find that their Acceleration is disabled or not available. There is a new tool in menu “Option” which allows you to enable your Acceleration that has been disabled.
+    New c++ packages are added. The programme can now support c++ 2013 redistributable packages and solve relevant problems. The rate for solving 0xc000007b problems increases in some extent due to the new packages.
+    A function of showing copyright information is added. If you wish to call this programme by other software, there is a new switch for you to decide whether you want to show the copyright information of this programme before you start repairing.
+
+Improved Features:
+    Some c++ packages are updated. According to the feedbacks from some users, I update the packages of c++ 2012 to the latest version. New packages have a better compatibility and can fix more errors.
+    Displaying time for first running has decreased significantly. The code structure has been optimized to improve the speed of showing the main form.
+    Message box of completing has been improved. News tips are friendlier for users to operate the following steps.
+
+Fixed Bugs:
+    A bug which may cause failed updating of c++ 2012 in some computers is fixed.
+    A bug that feedback form displays exceptionally is fixed.
+    A bug which may provide incorrect tips of c++ updating is fixed.
+    A bug which may show exceptional forms in Windows 7 when using large fonts is fixed.
+    A bug which may show exceptional forms in Windows XP when enabling simple form style is fixed.
+    A bug that may lead to unwilling quit when enabling simple form style is fixed.
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------Dividing Line---------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+
+DirectX Repair V3.0 (Key Updates)
+New Features:
+    New c++ packages are added. The programme (only Enhanced Edition) can now fix more errors and solve more problems in your systems.
+    A function of registering files in a specific folder is added. The old versions can only register files in system folders, while the new programme allows you to register any files in any folder, which may benefit the users of using some special versions of software.
+
+Improved Features:
+    The ability of solving 0xc000007b errors in some industrial software has been optimized. The new programme makes a lot of improvements for industrial software (such as 3DS MAX, MAYA and so on), especially for 64-bit software. 
+    The programme is optimized on Windows 8.1 systems. Some codes have been improved to give an excellent compatibility and avoid errors on Windows 8.1 series OS.
+    Notifications of checking c++ components are improved. The programme will give separated messages of registries and files to show whether they have been repaired successfully. In normal context, it will not affect the running of other software if only registries are still exceptional after repairing.

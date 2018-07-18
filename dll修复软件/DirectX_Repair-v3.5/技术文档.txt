@@ -1,0 +1,104 @@
+    为了与大家共同探讨和提高编程技术，在此我特别写了这篇技术文档。
+本文档中将包含本程序的部分源代码以及注释说明，仅供高级用户参考。
+其中部分代码来源于网络。
+    This technical document is made to share information about programming. It contains some parts of source code and comments of this programme. This document might be only suitable for experienced users. Some of the following code is from Internet.
+
+    DirectX修复工具V1.0版的开发环境为：Microsoft Visual Studio 2008，开发语言：
+Visual Basic，.NET Framework版本：2.0，开发系统：Windows 7 旗舰版32位。
+测试环境：Windows XP Home Edition(32 bit)、Windows XP Professional Edition(32 bit)、
+Windows 7 旗舰版(32 bit)、Windows 7旗舰版(64 bit)、Windows 8 Pro(64 bit)、
+Windows 8.1 Pre(64 bit)、Windows 10 pro (32 bit)、Windows 10 pro (64 bit)。
+    The environments for developing DirectX Repair V1.0 are shown as following: Microsoft Visual Studio 2008; Language: Visual Basic; .NET Framework: 2.0; Development OS: Windows 7 Ultimate 32-bit; Tested OS: Windows XP Home Edition (32 bit), Windows XP Professional Edition (32 bit), Windows 7 Ultimate (32 bit), Windows 7 Ultimate (64 bit), Windows 8 Pro (64 bit), Windows 8.1 Pre (64 bit), Windows 10 pro (32bit), Windows 10 pro (64 bit).
+
+---------------------------------------------------------------------------------------------------------------------
+
+    程序中的部分代码：
+    Some parts of source code:
+
+1、检测系统是32位还是64位。
+1. To detect if this is a 32-bit OS or 64-bit OS.
+	If Environment.GetEnvironmentVariable("PROCESSOR_ARCHITECTURE").IndexOf("64") <> -1 Then
+             '64位系统
+        Else
+             '32位系统
+        End If
+
+2、检测操作系统版本。
+2. To detect the version of the current OS.
+	If Val(My.Computer.Info.OSVersion) < 6 Then
+            'XP、2000等没有.NET的操作系统
+	Else
+	    'Vista、Win 7等自带.NET的操作系统
+        End If
+
+3、防止程序重复运行。
+3. To avoid re-running of the programme.
+	Dim procName As String
+        procName = System.Diagnostics.Process.GetCurrentProcess().ProcessName	
+	If (System.Diagnostics.Process.GetProcessesByName(procName)).GetUpperBound(0) > 0 Then
+            MsgBox("程序已经在运行！", MsgBoxStyle.Critical)
+            Me.Dispose()
+            Exit Sub
+        End If
+
+4、获取操作系统名及版本号。
+4. To acquire the system name and version information.
+	My.Computer.Info.OSFullName & My.Computer.Info.OSVersion
+
+
+5、调用系统的DirectX 诊断工具。
+5. To call the DirectX Diagnostic Tool from the OS.
+	Shell("dxdiag.exe", AppWinStyle.NormalFocus)
+
+6、发送电子邮件。
+6. To send the E-mail as a feedback.
+	'请把下面所有写“邮件”的地方全部换成“mail”，所有写“服务”的地方全部换成“smtp”
+        ’Please swap “邮件” to “mail”, and swap “服务” to “smtp”.
+        '进行上述替换的原因是防止某些杀毒软件误将下述代码认为是恶意程序。
+        ’The reason for employing such replacement is to avoid being considered as malicious code by some anti-virus software.
+        Dim 服务 As New System.Net.邮件.服务Client("服务.163.com", 25)
+        服务.Credentials = New System.Net.NetworkCredential(//E-mail name//, //E-mail password//)
+        Dim 邮件 As New System.Net.邮件.邮件Message()
+        邮件.Subject = //Your subject//
+        邮件.SubjectEncoding = System.Text.Encoding.GetEncoding("GB2312")
+        邮件.BodyEncoding = System.Text.Encoding.GetEncoding("GB2312")
+        邮件.From = New System.Net.邮件.邮件Address(//Your E-mail address//)
+        邮件.Priority = System.Net.邮件.邮件Priority.Normal
+        邮件.IsBodyHtml = True 'HTML格式的邮件,为false则发送纯文本邮箱        
+        邮件.Body = //mail body// '邮件内容
+        If Dir(//附件位置//) <> "" Then
+            邮件.Attachments.Add(New System.Net.邮件.Attachment(//附件位置//)
+        End If
+        邮件.To.Add(//收件人//)'添加收件人,如果有多个,可以多次添加
+        服务.Send(邮件)
+        邮件.Dispose()
+
+7、快速开启、关闭Windows7中的Aero特效（系统和硬件必须同时支持Aero时才有效）。
+7. To activate or deactivate Aero in Windows 7 (only available when both the OS and hardware support this feature).
+        Shell("sc.exe start uxsms") '快速开启Aero特效
+        Shell("sc.exe stop uxsms") '快速关闭Aero特效
+
+---------------------------------------------------------------------------------------------------------------------
+
+    程序中的编程思想：
+
+1、为什么要设置自我校验？
+    所谓的自我校验，就是检查程序中的文件是否为原始的文件。
+    细心的人肯定会发现，程序Data文件夹下有大量的dll文件，这些都是DirectX的组件。程序修复时就是以这些文件为蓝本对
+系统中的文件进行检测和修复。如果有别有用心的人将其替换为有问题甚至有恶意代码的文件后发布到网上，假如程序没有自我
+校验功能的话，程序就会以这些有问题的文件为蓝本进行修复，修复完成后系统肯定会出现问题甚至感染病毒。因此，本着为用
+户安全的角度出发，程序设置了自我校验。这样，只要程序检测到了非原始文件，就会停止修复，提示自我校验失败。
+    程序中用的强校验方式是MD5校验，也是比较常用的校验方式之一。该检验方式的优点是可以检测出文件的微小差别，缺点
+是对大文件校验较慢。具体的原理及程序中的细节这里不再赘述。
+
+2、为什么程序的界面看上去不很丰富？
+    这就要从本软件的设计初衷说起了。本软件的设计之初，为了方便各种阶段的人使用，因此软件的基调就是简约、简单、简洁。
+上述说的简单，指的是操作的简单，但是功能不能简单。只有这样，才能突出重点，方便任何人快速上手。当你有时间仔细品味时，
+你又会发现程序远不止仅仅修复DirectX那么简单。更新系统中的c++，注册系统中所有dll文件，为dll文件右键菜单添加注册和卸载
+项等功能会让人发现程序其实还有很多潜力有待发掘。
+
+3、有关于程序中包含的DirectX版本的说明。
+    在程序说明里写了本程序包含完整的DirectX组件，事实上，本程序包含了除DirectX for Visual Studio外其他所有的DirectX
+组件，在使用说明里那么写是为了减少对一般用户的影响。之所以本程序未包含DirectX for Visual Studio，主要有两方面考虑：
+第一，这些组件使用的非常少，一般用户完全不会去使用，如果包含它反而增加程序复杂度和体积，并不划算；第二，我认为，会用
+Visual Studio的人一定有能力自己动手解决该问题，不需要本软件的辅助。本程序最终基于上述两方面考虑而设计。

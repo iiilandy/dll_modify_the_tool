@@ -1,0 +1,16 @@
+    对于Windows XP SP3用户，需要首先安装Microsoft .NET Framework 2.0或更高版本才可运行本程序，否则将出现0xc0000135应用程序初始化失败的错误。
+    To the users who are still using Windows XP SP3, you need to install Microsoft .NET Framework 2.0 or higher versions before you can run this programme. Otherwise, you may suffer an issue of 0xc0000135.
+
+    Microsoft .NET Framework 2.0 SP2 下载地址：
+    The link for downloading Microsoft .NET Framework 2.0 SP2 is shown below:
+
+http://www.microsoft.com/zh-cn/download/details.aspx?id=1639
+
+    请下载NetFx20SP2_x86.exe（大小23.8MB）这个文件。
+    Please download the file with the name of NetFx20SP2_x86.exe and size of 23.8MB.
+
+    下载后先运行下载的安装包，然后即可运行本程序。
+    Please install .NET Framework after downloading, and then you can use this programme.
+
+    对于Windows Vista、Windows 7及后续系统的用户可直接运行本程序。
+    The ones who use Windows Vista, Windows 7 and Windows beyond can run this programme directly on your systems.

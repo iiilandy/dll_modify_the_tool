@@ -1,0 +1,134 @@
+    DirectX修复工具(DirectX Repair)是一款系统级工具软件，
+简便易用。本程序为绿色版，无需安装，可直接运行。
+
+    本程序的主要功能是检测当前系统的DirectX状态，如果发现异常则进行修复。
+程序主要针对0xc000007b问题设计，可以完美修复该问题。本程序中包含了最新版
+的DirectX redist(Jun2010)，并且全部DX文件都有Microsoft的数字签名，安全放心。
+
+    本程序为了应对一般电脑用户的使用，采用了傻瓜式一键设计，只要点击
+主界面上的“检测并修复”按钮，程序就会自动完成校验、检测、下载、修复以及注册
+的全部功能，无需用户的介入，大大降低了使用难度。
+
+    本程序适用于多个操作系统，如Windows XP（需先安装.NET 2.0，详情
+请参阅“致Windows XP用户.txt”文件）、Windows Vista、Windows 7、Windows 8、
+Windows 8.1、Windows 8.1 Update、Windows 10，同时兼容32位操作系统和64位操作系统。
+本程序会根据系统的不同，自动调整任务模式，无需用户进行设置。
+
+    本程序的V3.5版分为标准版、增强版以及在线修复版。标准版支持修复DirectX的功能，
+而增强版则支持同时修复DirectX和c++的功能。在线修复版与标准版相同，默认只支持修复
+DirectX，但其所需的数据包需要在修复时自动下载。各个版本之间，主程序完全相同，只是
+其配套使用的数据包不同。因此，标准版和在线修复版可以通过补全扩展包的形式成为增强版。
+本程序自V3.5版起，自带扩展功能。只要在主界面的“工具”菜单下打开“选项”对话框，
+找到“扩展”标签，点击其中的“开始扩展”按钮即可。扩展过程需要Internet连接，扩展
+成功后重新运行程序即可使新的数据包生效。扩展用时根据网络速度不同而不同，最快仅需
+数秒，最慢需要数分钟，烦请耐心等待。
+
+    本程序自V2.0版起采用全新的底层程序架构，使用了异步多线程编程技术，使得检测、
+下载、修复单独进行，互不干扰，快速如飞。新程序更改了自我校验方式，因此使用新版本
+的程序时不会再出现自我校验失败的错误；但并非取消自我校验，因此程序安全性与之前
+版本相同，并未降低。
+
+    程序有自动更新c++功能。由于绝大多数软件运行时需要c++的支持，并且
+c++的异常也会导致0xc000007b错误，因此程序在检测修复的同时，也会根据需要
+更新系统中的c++组件。自V3.2版本开始使用了全新的c++扩展包，可以大幅提高工业
+软件修复成功的概率。修复c++的功能仅限于增强版，标准版及在线修复版在系统c++
+异常时（非丢失时）会提示用户使用增强版进行修复。
+
+    程序有两种窗口样式。正常模式即默认样式，适合绝大多数用户使用。另有一种
+简约模式，此时窗口将只显示最基本的内容，修复会自动进行，修复完成10秒钟后会自动退出。
+该窗口样式可以使修复工作变得更加简单快速，同时方便其他软件、游戏将本程序内嵌，
+即可进行无需人工参与的快速修复。开启简约模式的方法是：打开程序所在目录下的
+“Settings.ini”文件（如果没有可以自己创建），将其中的“FormStyle”一项的值改
+为“Simple”并保存即可。
+
+    程序有高级筛选功能，开启该功能后用户可以自主选择要修复的文件，避免了其他不
+必要的修复工作。同时，也支持通过文件进行辅助筛选，只要在程序目录下建立“Filter.dat”
+文件，其中的每一行写一个需要修复文件的序号即可。该功能仅针对高级用户使用，并且必须
+在正常窗口模式下才有效（简约模式时无效）。
+
+    本程序有自动记录日志功能，可以记录每一次检测修复结果，方便在出现问题时，
+及时分析和查找原因，以便找到解决办法。
+
+    程序的“选项”对话框中包含了5项高级功能。点击其中的“注册系统文件夹中所有dll文件”
+按钮可以自动注册系统文件夹下的所有dll文件。该项功能不仅能修复DirectX的问题，
+还可以修复系统中很多其他由于dll未注册而产生的问题，颇为实用。点击该按钮旁边的小箭头，
+还可以注册任意指定文件夹下的dll文件，方便用户对绿色版、硬盘版的程序组件进行注册。
+点击第二个按钮可以为dll文件的右键菜单添加“注册”和“卸载”项，方便对单独的dll文件
+进行注册。请注意，并不是所有的dll文件都可以通过这种方式注册。点击“扩展”选项卡可以
+将任意版本的程序扩展成增强版。点击“DirectX版本”选项卡，可以自行修改系统中DirectX的
+版本信息。点击“DirectX加速”选项卡可以控制系统中DirectX加速的开启与关闭。
+
+    新版程序集成了用户反馈程序，可以在用户允许的前提下发送检测修复结果。
+用户也可以在出现问题时通过反馈程序和软件作者进行交流，共同查找问题。
+反馈是完全自愿和匿名（如果不填写E-mail地址）的。
+
+    本程序的通用版基于Microsoft .NET Framework 2.0开发，对于Windows 2000、
+Windows XP、Windows 2003的用户需要首先安装.NET Framework 2.0或更高版本
+方可运行本程序。有关下载和安装的详细信息请参阅“致Windows XP用户.txt”文件。
+对于Windows Vista、Windows 7及后续用户，可以直接运行本程序。
+
+    同时鉴于Windows 8（Windows 8.1、Windows 8.1 Update）、Windows 10系统中默认未包含
+.NET Framework 2.0，因此新版的程序文件夹内将包含一个DirectX_Repair_win8_win10的特别版程序，
+该程序功能与通用版相同，基于.NET Framework 4.0开发，可以在Windows8（Windows 8.1、Windows 8.1 Update）、
+Windows 10系统中直接运行（其他系统如果安装了.NET Framework 4.0也可以运行这个特别版的程序）。
+
+    本程序的官方博客地址为：http://blog.csdn.net/vbcom/article/details/6962388
+所有的更新以及技术支持都可以到该博客上找到。
+
+    此次发布的程序虽经多次测试，但仍难免存在不足以及BUG，希望大家见谅并指正。
+如果您对本程序有任何疑问或建议，欢迎发送电子邮件到：
+zhangyue667#263.net  （把#换成@）
+    本人期待与您的交流。
+
+    最后，再次感谢大家的支持！
+
+
+
+
+                                                                  zhangyue667#263.net
+                                                                       2016-6-23
+
+
+    DirectX Repair is the system-level tool software which is designed for addressing the problems in DirectX. This programme is installation free and can run directly under Windows OS. The main function of this programme is to check the possible errors under the DirectX, especially the 0xc000007b problems, and then fix them. This programme consists of the latest version of DirectX Redist (Jun2010), and all the DX files have the digital signatures from Microsoft. In this case, the security of this programme can be guaranteed.
+
+    To be friendlier to the less experienced users, this programme is designed to repair all the underlying issues by just clicking one button. Once the users click the button “Check and Repair” on the main form, the programme will finish verification, checking, downloading, repairing and registering automatically, without any further participation from the users, which reduce the difficulty of operating this software.
+
+    This programme is suitable for multiple Windows OS, such as Windows XP, Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 8.1 Update and Windows 10, and both 32-bit and 64-bit systems are supported. The programme can detect the version of the system and the bit of system automatically, and repair the necessary files accordingly. No manual settings are required.
+
+    DirectX Repair V3.5 provides three different editions of programmes; for example, Standard Edition, Enhanced Edition and Online Edition. The Standard Edition can repair the errors in DirectX, while the Enhanced Edition can repair both DirectX and c++ components. The Online Edition is similar to the Standard Edition, but the files for repairing are not included in Online Edition, so Internet connection is required when it is repairing the files. The exe applications are exactly the same between each edition. What makes their differences is the data package that they include. In this context, the Standard and Online Edition could be extended to Enhance Edition if new data packages are added. From V3.5 on, DirectX Repair supports a new feature called Extending. The Extending page can be found from the sub-menu “Option” under the menu “Tool”. The extending process requires Internet connection. Please re-run the programme to activate the new data package after the successful extending. The time for extending varies from a few seconds to a few minutes according to the Internet speed.
+
+    From V2.0 on, DirectX Repair has updated the base of the programme with multithread programming technologies. The new design provides separated tasks for checking, downloading and repairing, which means that each task can perform individually without interfering between each other. The programme also improves the verification mechanism, so there will not be any errors during the verification process; however, this does not mean that the programme cancels the verification, so the security level remains the same as previous versions.
+
+    The programme supports updating c++ components. Since most software requires the assistance of c++ while running and the exceptions in c++ might also lead to 0xc000007b errors, the programme will examine c++ during the checking process. From V3.2 on, DirectX Repair starts to employ new c++ packages, and it can significantly increase the rate of successful repairing, especially for the industrial software. Such c++ repairing is only available for Enhanced Edition. The Standard and Online Edition will inform the users to switch to Enhanced Edition if the programme finds that there might be possible errors from the exceptional c++ components (not from missed c++ components).
+
+    There are two types of form styles, which are normal style and simple style respectively. Normal style is the default style, and it is suitable for most users. Simple style is a simplified form, and only the most basic elements will be shown. In this style, checking and repairing will be implemented automatically, and the programme will quit in 10 seconds after completing all the processes. This design is to provide an easy operation for some labour sensitive users, and this style is easy to be integrated in other games or software to achieve the goal of human-involved free repairing. The simple style can be enabled by following steps: open the file “Settings.ini” under the programme folder (this file can be created manually if there is no such file under the folder); change the value of “FormStyle” to “Simple”; save the file and this feature is then enabled.
+
+    This programme also provides a feature called Advanced Filter. With this feature, the users can select which files are needed to be repaired, so the unnecessary repairing could be avoided. Meanwhile, the programme can also realize Advanced Filter by creating an auxiliary file called “Filter.dat” under the programme folder. In this auxiliary file, the indexes of the selected files can be written individually in each line. This feature might be only suitable for the experienced users, and it is only available in the normal style.
+
+    This programme can record the logs automatically while repairing. Each result is recorded separately with context information. This feature is quite useful especially when the repairing is failed, since the author can analyse the possible reasons from the recorded logs.
+
+    There are five advanced features in the dialog form of “Option”. By clicking the button of “Register all ‘dll’ files in your system folder”, the programme will register all the dll files under your system folder automatically. This feature is not only suitable for the issues caused by DirectX, but also useful for the problems generated by the unregistered dll files. There is a small arrow beside this button, and it is designed to register the dll files under the specified folder. By clicking the button of “Add items ‘Register’ and ‘Unregister’ to dll-file right-click menu”, new items will appear under the right-click menu of the dll files. Please note that, not all the dll files can be registered by this method. In the “Extending” Tab, the programme can be extended to Enhanced Edition from Standard or Online Edition. In the “DX Version” Tab, the DirectX information can be amended by the users. In the “DX Acceleration” Tab, the DirectX accelerations can be enabled or disabled.
+
+    The new version of programme has embedded the feedback programme, and the repairing results can be sent back to the author with the permit of the end users. The end users can also communicate with the author by the feedback function to address the issues together. The feedback is voluntary and anonymous (if you do not fill in your E-mail address).
+
+    The general version of this programme (DirectX Repair.exe) is developed by Microsoft .NET Framework 2.0. To the users who are still using Windows 2000, Windows XP and Windows 2003, you need to install Microsoft .NET Framework 2.0 or higher versions before you can run this programme. The detailed steps for installing .NET can be found in the file “To Windows XP users.txt”. The ones who use Windows Vista, Windows 7 or Windows beyond can run this programme directly on your systems.
+
+    Besides, since Windows 8 (Windows 8.1, Windows 8.1 Update) and Windows 10 do not include .NET Framework 2.0 directly, a new special file (DirectX_Repair_win8_win10.exe) is included under the programme folder. This file has exactly the same functions as the general version. The difference is that this file is developed by .NET Framework 4.0, so it can run directly under Windows 8 and Windows 10. Other Windows systems can also run this programme if they install .NET Framework 4.0.
+
+    The official blog for DirectX Repair can be found by the following link:
+http://blog.csdn.net/vbcom/article/details/6962388
+All the updates and technical supports can be obtained from this web page.
+
+    Although this programme has been tested many times before publishing, there still could be some bugs within this programme. I will appreciate if you can point out the errors and report them to me. If you have any questions, suggestions or comments of this software, please do not hesitate to contact with me by E-mail:
+zhangyue667#263.net (Please swap # with @)
+
+    I am looking forward to your E-mails.
+
+    Finally, thanks for all of your cooperation!
+
+
+
+                                                                  zhangyue667#263.net
+                                                                       2016-6-23
+
+  
